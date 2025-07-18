@@ -10,6 +10,15 @@ dotenv.config();
 
 export default defineConfig((config) => {
   return {
+    // ===== ADICIONE A CONFIGURAÇÃO DO SERVIDOR AQUI =====
+    server: {
+      host: true, // Permite acesso via IP
+      allowedHosts: [
+        'incolordigital-boltdiy.xmtsd1.easypanel.host'
+      ],
+    },
+    // ====================================================
+
     define: {
       'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV),
     },
